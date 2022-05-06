@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #1b1f29;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    width: 600px;
+}
+.card .picbox{
+    position: relative;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    z-index: 2;
+}
+.card .picbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.9);
+    transition: 0.5s ease-in-out;
+}
+.card:hover .picbox img{
+    transform: scale(1);
+}
+.card .details{
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: #f66335;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    z-index:1;
+}
+.card:hover .details{
+    left: 300px;
+}
+.card .details h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+.card .details h3 span{
+    font-size: 0.65em;
+    font-weight: 300;
+    text-transform: none;
+    opacity: 0.85;
+}
+.card .details h4{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+}
+.card .details p{
+    color: #fff;
+    opacity: 0.85;
+    font-size: 0.8em;
+}
+.card .details .size{
+    display: flex;
+    gap: 10px;
+}
+.card .details .size li{
+    list-style: none;
+    color: #fff;
+    font-size: 0.9em;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.card .details .size li:hover{
+    color: #f66335;
+    background: #fff;
+    opacity: 1;
+}
+.card .details .price{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.card .details .price h2{
+    color: #fff;
+    font-weight: 600;
+    font-size: 2em;
+}
+.card .details .price h2 sup{
+    font-weight: 300;
+}
+.card .details .price h2 small{
+    font-size: 0.75em;
+}
+.card .details .price a{
+    display: inline-flex;
+    padding: 10px 25px;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #f66335;
+}
+.card .details .price a:hover{
+    font-weight: 700;
+}
